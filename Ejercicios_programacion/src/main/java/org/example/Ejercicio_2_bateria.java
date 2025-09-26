@@ -18,11 +18,11 @@ public class Ejercicio_2_bateria {
             double horas_normal = 40;
             double horas_extra = horas - 40;
             double sueldo = ((horas_extra * (tarifa * 1.5)) + (horas_normal * tarifa));
-            System.out.println("Tu sueldo con las horas extra multiplicando tu tarifa por 1.5 es de: " + sueldo + " euros"); }
-
-        else {
+            System.out.println("Tu sueldo con las horas extra multiplicando tu tarifa por 1.5 es de: " + sueldo + " euros");
+        }else {
             double sueldo = horas * tarifa;
-        System.out.println("Tu sueldo es de " + sueldo + " euros");}
+            System.out.println("Tu sueldo es de " + sueldo + " euros");
+        }
 
     }
 }
