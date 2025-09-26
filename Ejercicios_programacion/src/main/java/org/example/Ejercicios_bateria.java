@@ -1,8 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-
-public class Ejercicio_2_bateria {
+public class Ejercicios_bateria {
     static void main() {
         Scanner teclado = new Scanner(System.in);
 
@@ -24,7 +23,6 @@ public class Ejercicio_2_bateria {
             int sueldo = horas * tarifa;
             System.out.println("Tu sueldo es de " + sueldo + " euros");
         }
-
-
     }
+
 }
