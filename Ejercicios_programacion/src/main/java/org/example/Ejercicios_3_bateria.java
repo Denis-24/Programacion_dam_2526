@@ -12,12 +12,12 @@ public class Ejercicios_3_bateria {
         if (num == 0) {
             System.out.println("tu numero es neutro");
 
-        }
-        if (num < 0 ) {
-            System.out.println("Tu numero es negativo");
-        }
-        if (num > 0 ) {
-            System.out.println("Tu numero es positivo");
+        }else {
+            if (num < 0 ) {
+                System.out.println("Tu numero es negativo");
+            }else {
+                    System.out.println("Tu numero es positivo");
+            }
         }
     }
 }
