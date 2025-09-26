@@ -7,12 +7,12 @@ public class Ejecicios_1_bateria {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Cuantas horas trabajas");
-        String horas = teclado.next();
+        int horas = teclado.nextInt();
 
         System.out.println("Dime tu tarifa de hora");
-        String tarifa = teclado.next();
+        int tarifa = teclado.nextInt();
 
-        long sueldo = horas * tarifa;
+        int sueldo = horas * tarifa;
 
         System.out.println("Tu salario es de " + sueldo + "Euros");
     }
