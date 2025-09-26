@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Ejercicio_2_Bateria {
+public class Ejercicio_1_Bateria {
     static void main() {
         Scanner teclado = new Scanner(System.in);
 
