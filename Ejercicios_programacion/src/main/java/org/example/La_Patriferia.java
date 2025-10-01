@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class La_Patriferia {
     static void main() {
+        //Pongo los requisitos para poder subirse a las atraciones.
         Scanner teclado = new Scanner(System.in);
         final int ALTURA_MINIMA = 140;
         final int ALTURA_MAXIMA = 230;
         final int PESO_MAXIMO = 120;
-
+        //Damos la bienvenida antes e ejecutar cualquier cosa.
         System.out.println("!BIENVENIDOS A LA PATRILANDIA");
-
+        //
         int altura = 0;
         boolean control = false;
         do {
