@@ -23,7 +23,7 @@ public class La_Patriferia {
                 altura = teclado.nextInt();
                 control = true;
             }catch (Exception e){
-                System.out.println("SOLO PUEDES INTRODUCIR NUMEROS POSITIVOS...");
+                System.out.println("SOLO PUEDES INTRODUCIR NUMEROS...");
                 teclado.nextLine();
             }
         }while (control == false);
@@ -49,9 +49,9 @@ public class La_Patriferia {
                     teclado.nextLine();
                 }
             }while (control == false);
-            //creo una variable.
+            //creo una variable peso minimo que es calculada multiplicando la altura anteriormente introducida por dos y luego entre ocho.
             int peso_min = altura * 2 / 8;
-            //Hago una condicion la cual si te pasas de peso o te quedas corto te pone un mensaje. Y que si el peso introducido por el usuario esta entre los limites salta un mensaje e que se puede subri a la atracion.
+            //Hago una condicion la cual si te pasas de peso o te quedas corto te pone un mensaje. Y que si el peso introducido por el usuario esta entre los limites salta un mensaje de que se puede subri a la atracion.
             if (peso > PESO_MAXIMO){
                 System.out.println("LO SIENTO. Sobrepasas " + (PESO_MAXIMO - peso) + " kg");
             }else if (peso < peso_min){
