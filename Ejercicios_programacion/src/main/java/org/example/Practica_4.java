@@ -26,7 +26,7 @@ public class Practica_4 {
             if ((multiplicando > 999 || multiplicando < 100) && control == true) {
                 System.out.println("El numero debe de ser de 3 cifras");
                 control = false;
-            }else if ((multiplicador > -100 || multiplicador < -999) && control == true){
+            }else if ((multiplicando > -100 || multiplicando < -999) && control == true){
                 System.out.println("El numero debe de ser de 3 cifras ");
                 control = false;
             }
@@ -46,10 +46,10 @@ public class Practica_4 {
                 System.out.println("Respuesta invalida...");
             }
             teclado.nextLine();
-            if ((multiplicador > 999 || multiplicador < 100) && control == true){
+            if ((multiplicador >= 999 || multiplicador <= 100) && control == true){
                 System.out.println("El numero debe de ser de 3 cifras");
                 control = false;
-            }else if ((multiplicador > -100 || multiplicador < -999) && control == true){
+            }else if ((multiplicador >= -100 || multiplicador <= -999) && control == true){
                 System.out.println("El numero debe de ser de 3 cifras");
                 control = false;
             }
