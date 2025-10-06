@@ -11,7 +11,7 @@ public class Practica_examen {
 
         do {
             try {
-                System.out.println("Introduce la nota del primer trimestre...");
+                System.out.println("Introduce la nota del primer trimestre (0-10)...");
                 tri_1 = teclado.nextDouble();
                 control = true;
 
@@ -19,10 +19,15 @@ public class Practica_examen {
                 System.out.println("Solo puedes introducir numeros.");
                 teclado.nextLine();
             }
+
             if (tri_1 < 0) {
                 System.out.println("Solo puedes introducir numeros positivos.");
                 control = false;
+            }else if (tri_1 > 10) {
+                System.out.println("Solo puedes poner numero del (0-10)");
+                control = false;
             }
+
         } while (control == false);
 
         control = false;
@@ -38,11 +43,16 @@ public class Practica_examen {
                 System.out.println("Solo puedes introducir numeros.");
                 teclado.nextLine();
             }
+
             if (tri_2 < 0) {
                 System.out.println("Solo puedes introducir numeros positivos.");
                 control = false;
 
+            }else if (tri_2 > 10) {
+                System.out.println("Solo puedes poner numero del (0-10)");
+                control = false;
             }
+
         } while (control == false);
 
         control = false;
@@ -58,11 +68,16 @@ public class Practica_examen {
                 System.out.println("Solo puedes introducir numeros.");
                 teclado.nextLine();
             }
+
             if (tri_3 < 0) {
                 System.out.println("Solo puedes introducir numeros positivos.");
                 control = false;
 
+            }else if (tri_3 > 10) {
+                System.out.println("Solo puedes poner numero del (0-10)");
+                control = false;
             }
+
         } while (control == false);
 
         double suma = tri_1 + tri_2 + tri_3;
@@ -76,5 +91,7 @@ public class Practica_examen {
         } else {
             System.out.println("!Casi, la proxima vez seguro que apruebas!");
         }
+
     }
+
 }
