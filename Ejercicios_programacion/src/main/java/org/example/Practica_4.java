@@ -26,12 +26,11 @@ public class Practica_4 {
             if ((multiplicando > 999 || multiplicando < 100) && control == true) {
                 System.out.println("El numero debe de ser de 3 cifras");
                 control = false;
-<<<<<<< HEAD
+
             }else if ((multiplicando > -100 || multiplicando < -999) && control == true){
                 System.out.println("El numero debe de ser de 3 cifras ");
                 control = false;
-=======
->>>>>>> 0dd46616a0ac2069bb1d8092901e492ec89907ed
+
             }
 
         }while (control==false);
@@ -52,12 +51,11 @@ public class Practica_4 {
             if ((multiplicador >= 999 || multiplicador <= 100) && control == true){
                 System.out.println("El numero debe de ser de 3 cifras");
                 control = false;
-<<<<<<< HEAD
+
             }else if ((multiplicador >= -100 || multiplicador <= -999) && control == true){
                 System.out.println("El numero debe de ser de 3 cifras");
                 control = false;
-=======
->>>>>>> 0dd46616a0ac2069bb1d8092901e492ec89907ed
+
             }
 
         }while (control==false);
