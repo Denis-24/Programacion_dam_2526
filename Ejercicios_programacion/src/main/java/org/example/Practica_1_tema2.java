@@ -64,7 +64,7 @@ public class Practica_1_tema2 {
                 //cambio la suma a texto para poder hacer lo siguientes pasos.
                 String suma_stringe = Integer.toString(suma);
 
-                //cogo de el total de la suma y los guardo en distintas variables.
+                //cogo de el total de la suma y guardo cada numero de la suma en distintas variables.
                 String num1_string = suma_stringe.substring(0, 1);
                 String num2_string = suma_stringe.substring(1, 2);
                 String num3_string = suma_stringe.substring(2, 3);
