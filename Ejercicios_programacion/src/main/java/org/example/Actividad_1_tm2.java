@@ -86,5 +86,20 @@ public class Actividad_1_tm2 {
                 }
             }
         }
+        int numero = 1;
+        char caracter = 'A';
+        String palabra = "Denis";
+
+        switch (palabra){
+            case 1:
+                System.out.println("El alumno es raul");
+                break;
+            case 2:
+                System.out.println("La profe es Patricia ");
+                break;
+            default:
+                System.out.println("No conozco ese nombre");
+                break;
+        }
     }
 }
