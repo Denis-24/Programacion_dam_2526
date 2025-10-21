@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Actividad_1_tm2 {
+public class ActividadGeneraciones {
     static void main() {
 
         Scanner teclado = new Scanner(System.in);
@@ -29,45 +29,45 @@ public class Actividad_1_tm2 {
             control=false;
         }
         if (control){
-            if (modo==1){
+            switch (modo){
 
-                System.out.println("introduce tu año de nacimineto");
-                String anyo_nacimineto = teclado.next();
+                case 1:
+                    System.out.println("introduce tu año de nacimineto");
+                    String anyo_nacimineto = teclado.next();
 
-                try{
-                    anyo_nacimineto_int = Integer.parseInt(anyo_nacimineto);
-                }catch (NumberFormatException e){
-                    System.out.println("El formato no es numerico.");
-                    return;
-                }
+                    try{
+                        anyo_nacimineto_int = Integer.parseInt(anyo_nacimineto);
+                    }catch (NumberFormatException e){
+                        System.out.println("El formato no es numerico.");
+                        return;
+                    }
+                case 2:
+                    int edad = 0;
 
+                    System.out.println("Introduce tu edad");
 
-            }else if (modo==2){
+                    if (teclado.hasNextInt()){
+                        edad = teclado.nextInt();
+                    }else {
+                        System.out.println("La edad no tiene formato correspondiente (numerico)");
+                        break;
+                    }
 
-                int edad = 0;
-
-                System.out.println("Introduce tu edad");
-
-                if (teclado.hasNextInt()){
-                    edad = teclado.nextInt();
-                }else {
-                    System.out.println("La edad no tiene formato correspondiente (numerico)");
-                    return;
-                }
-
-                if (edad>=0){
-                    anyo_nacimineto_int = anyo_actual-edad;
+                    if (edad>=0){
+                        anyo_nacimineto_int = anyo_actual-edad;
 
 
-                }else {
-                    System.out.println("La edad no es correcta.");
-                    return;
-                }
+                    }else {
+                        System.out.println("La edad no es correcta.");
+                        return;
+                    }
+                    break;
+                default:
+                    System.out.println("valor del modo incorrecto");
+                    break;
 
-            }else {
-                System.out.println("valor del modo incorrecto");
-                return;
             }
+
 
             if (anyo_nacimineto_int>=ANYO_MINIO && anyo_nacimineto_int<=anyo_actual){
 
@@ -85,21 +85,6 @@ public class Actividad_1_tm2 {
                     System.out.println("Generacion Z");
                 }
             }
-        }
-        int numero = 1;
-        char caracter = 'A';
-        String palabra = "Denis";
-
-        switch (numero){
-            case 1:
-                System.out.println("El alumno es raul");
-                break;
-            case 2:
-                System.out.println("La profe es Patricia ");
-                break;
-            default:
-                System.out.println("No conozco ese nombre");
-                break;
         }
     }
 }
