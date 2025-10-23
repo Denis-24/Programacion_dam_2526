@@ -12,7 +12,7 @@ public class Bucle_6 {
         for (int i = 1; i<= cantidad; i++){
             System.out.println("inserta nº " + i );
             int num = tecaldo.nextInt();
-            int suma = 
+            //int suma =
         }
 
     }
