@@ -42,7 +42,10 @@ public class Calculadora {
         control = false;
 
         //hago un if por si elige la opcion de raiz que no pida el segundo operando ya que no se necesita. tmabien hago un try-catch para comprobar que el resultado es valido.
-        if (!operacion.equals("R") || (!operacion.equals("r"))){
+        if (operacion.equals("R") || (operacion.equals("r"))){
+
+
+        }else {
             do {
                 try{
                     System.out.println("Introduce un segundo operando...");
@@ -53,7 +56,6 @@ public class Calculadora {
                     teclado.nextLine();
                 }
             }while (control == false);
-
         }
 
         //creo un switch con los casos que he mostrado antes por pantalla de las operaciones. Dependiedno del caso que haya elegido se hara una operacion o otra. y se guardara en resultados.
@@ -74,7 +76,7 @@ public class Calculadora {
                 }
                 resultado = operando_1 / operando_2;
                 break;
-            case "R":
+            case "R" , "r":
                 resultado = Math.sqrt(operando_1);
                 break;
 
@@ -83,11 +85,11 @@ public class Calculadora {
                 return;
         }
 
-
-        if (!operacion.equals("R")){
-            System.out.println("El resultado de " + operando_1 + " " + operacion + " " + operando_2 + " = " + resultado);
-        }else {
+        //hago  un if para que si la operacion es igual a una raizz salga la solucion con otro mesaje ya que en este caso no se necesita el segundo operando.
+        if (operacion.equals("R") || (operacion.equals("r"))) {
             System.out.println("El resultado de " + operando_1 + " " + operacion + " = " + resultado );
+        }else {
+            System.out.println("El resultado de " + operando_1 + " " + operacion + " " + operando_2 + " = " + resultado);
         }
     }
 }
