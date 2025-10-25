@@ -18,7 +18,7 @@ public class String_Tema2 {
         System.out.println(trozo_final);
 
         int posicion = frase.indexOf("palo");
-        System.out.println(posicion);
+        System.out.println(posicion + "-");
 
         int posicion2 = frase.indexOf("palo",10 );
         System.out.println(posicion2);

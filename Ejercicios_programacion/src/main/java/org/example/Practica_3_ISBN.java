@@ -8,9 +8,9 @@ public class Practica_3_ISBN {
 
         int modo = 0;
         String isbn_ejemplo = "xxxxxxxxxx";
-        int tamanyo = isbn_ejemplo.length();
-        int tamanyo_1 = 0;
-        int tamanyo_2 = 0;
+        int limite = isbn_ejemplo.length();
+        int limite_1 = 0;
+        int limite_2 = 0;
         int num = 10;
 
         System.out.println("!Validador de ISBN!");
@@ -34,15 +34,20 @@ public class Practica_3_ISBN {
                     System.out.println("Introduce el ISBN para validar.");
                     String validar = teclado.next();
 
-                    tamanyo_1 = validar.length();
+                    limite_1 = validar.length();
 
-                    if (tamanyo_1 < tamanyo || tamanyo_1 > tamanyo){
+                    if (limite_1 < limite || limite_1 > limite){
                         System.out.println("ISBN introducido incorrecto.");
                     }
 
-                    for (int i=0; i<=tamanyo_1; i++){
+                    for (int i = 0; i< limite_1; i++){
                         System.out.println(validar.charAt(i));
                     }
+
+                    for (int j=10; j>=1; j--){
+                        System.out.println(j);
+                    }
+
 
 
                     break;
@@ -50,9 +55,9 @@ public class Practica_3_ISBN {
                     System.out.println("Introduce el ISBN para reparar.");
                     String reparar = teclado.next();
 
-                    tamanyo_2 = reparar.length();
+                    limite_2 = reparar.length();
 
-                    if (tamanyo_2 < tamanyo || tamanyo_2 > tamanyo){
+                    if (limite_2 < limite || limite_2 > limite){
                         System.out.println("ISBN introducido incorrecto.");
                     }
                     break;
