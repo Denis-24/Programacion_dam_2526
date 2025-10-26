@@ -77,7 +77,9 @@ public class Practica_3_ISBN {
                     System.out.println("Bienvenido, introduce el ISBN el cual quieres reparar.");
                     String reparar = teclado.next();
 
-                    limite_2 = reparar.length();
+                    String reparar_mayuscula = reparar.toUpperCase();
+
+                    limite_2 = reparar_mayuscula.length();
 
                     if (limite_2 > limite || limite_2 < limite){
                         System.out.println("ISBN introducido es incorrecto.");
@@ -91,39 +93,38 @@ public class Practica_3_ISBN {
                         break;
                     }
 
-                    for (int correcto = 0; correcto<10; correcto++) {
-
-                        int suma_3 = 0;
+                    for (int j = 0; j<=10; j++){
+                        int suma_1 = 0;
                         boolean valido = true;
 
-                        for (int i = 0; i < 10; i++) {
-                            char c = reparar.charAt(i);
+                        for (int i = 0; i< limite_2; i++){
+                            char c = reparar_mayuscula.charAt(i);
                             int valor = 0;
 
-                            if (i == posicion_1) {
-                                valor = correcto;
-
-                            } else if (c == 'X' && i == 9) {
+                            if (posicion == c){
+                                valor = j;
+                            }else if (c == 'X' && i == 9){
                                 valor = 10;
-
-                            } else if (c >= '0' && c <= '9') {
+                            }else if (c >= '0' & c <= '9' ){
                                 valor = Integer.parseInt(String.valueOf(c));
-                            } else {
+                            }else{
+                                System.out.println("Valores introducidos incorrectos.....");
                                 valido = false;
+                                break;
                             }
 
                             int peso = 10 - i;
-                            suma_3 += valor * peso;
+                            suma_1 += valor * peso;
 
                         }
-                        if (valido && suma_3 % 11 == 0) {
-                            if (correcto == 10 && posicion_1 == 9) {
+                        if (valido && suma_1 % 11 == 0 ){
+                            if (j == 10 && posicion_1 == 9){
                                 System.out.println("El digito que falta es X");
-                            } else {
-                                System.out.println("EL digito que falta es " + correcto);
+                            }else {
+                                System.out.println("el digito que falta es " + j);
                             }
-                            return;
                         }
+                        return;
                     }
                     break;
 
