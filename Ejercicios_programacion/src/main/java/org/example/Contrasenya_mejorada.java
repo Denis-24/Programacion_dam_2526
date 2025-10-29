@@ -30,11 +30,8 @@ public class Contrasenya_mejorada {
 
         //caracter escogido por el numero aleatorio
         char letra_max = caracter_max.charAt(numero_ale_max);
-        System.out.println(letra_max);
         char letra_min = caracter_min.charAt(numero_ale_min);
-        System.out.println(letra_min);
         char num = caracter_num.charAt(numero_ale_num);
-        System.out.println(num);
 
         //numero aleatorio que se va a sustituir en la contraseña
         int posicion1_contrsenya = aleatorio.nextInt(tamanyo_contrasenya);
@@ -43,20 +40,15 @@ public class Contrasenya_mejorada {
 
         //letra de la contraseña que se va acambiar elegida por el numero aleatorio.
         char letra1_sus = contrasenya.charAt(posicion1_contrsenya);
-        System.out.println(letra1_sus);
         char letra2_sus = contrasenya.charAt(posicion2_contrsenya);
-        System.out.println(letra2_sus);
         char letra3_sus = contrasenya.charAt(posicion3_contrsenya);
-        System.out.println(letra3_sus);
 
         String contrasenya_paso1 = contrasenya.replace(letra1_sus,letra_max);
         String contrasenya_paso2 = contrasenya_paso1.replace(letra2_sus,letra_min);
         String contrasenya_paso3 = contrasenya_paso2.replace(letra3_sus,num);
 
+        System.out.println("");
+        System.out.println("Contraseña segura sugerida = " + contrasenya_paso3);
 
-        System.out.println(contrasenya);
-        System.out.println(contrasenya_paso3);
-
-        //creo un random para cada string y despues los sustituyo en un numero aleatorio de la contraseña ya creada.
     }
 }
