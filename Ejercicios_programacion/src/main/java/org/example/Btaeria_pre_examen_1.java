@@ -9,9 +9,15 @@ public class Btaeria_pre_examen_1 {
 
         int i = 0;
         int num =0;
+        int limite = 0;
 
-        System.out.println("Cuantos numero quieres introducir");
-        int limite = teclado.nextInt();
+
+        try{
+            System.out.println("Cuantos numero quieres introducir");
+            limite = teclado.nextInt();
+        }catch (Exception e){
+            System.out.println("Valores introduciod incorrectos");
+        }
 
         for (i=0;i>=limite;i++);{
 
