@@ -18,8 +18,8 @@ public class ejercicio_4_vector {
                 vector[i]=vector[i+1];
             }
         }
-        int vector2[] = vector.length-2;
+        int vector2[] = new int [vector.length-2];
         tamanyo = vector.length;
-        System.out.println(Arrays.toString(vector));
+        System.out.println(Arrays.toString(vector2));
     }
 }
