@@ -8,10 +8,6 @@ public class ejercicio_7_vectores {
             int vector2[] = {4,5,6};
             int vector3[] = new int[vector1.length + vector2.length];
 
-        for (){
-            
-        }
-
 
 
 
