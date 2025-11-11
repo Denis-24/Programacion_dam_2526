@@ -27,7 +27,7 @@ public class ruelta {
         int num_apuesta = teclado.nextInt();
 
         if (!Arrays.asList(numeros).contains(num_apuesta)) {
-            System.out.println("ERROR. El número no es válido (0-36)");
+            System.out.println("ERROR. El numero no es valido (0-36)");
             return;
         }
 
@@ -36,7 +36,7 @@ public class ruelta {
             color_apuesta = teclado.next().toLowerCase();
 
             if (!Arrays.asList(COLORES).contains(color_apuesta)) {
-                System.out.println("ERROR. El color introducido no es válido (rojo-negro)");
+                System.out.println("ERROR. El color introducido no es valido (rojo-negro)");
                 return;
             }
 
@@ -64,9 +64,9 @@ public class ruelta {
         System.out.println("Ha salido " + numero_sorteo + " " + color_sorteo + " " + par_impar_sorteo);
 
         if (numero_sorteo== num_apuesta && color_sorteo.equals(color_apuesta) && par_impar_sorteo.equals(par_impar_apuesta)) {
-            System.out.println("HAS GANADO!!");
+            System.out.println("HAS GANADO!");
         } else if (numero_sorteo== num_apuesta) {
-            System.out.println("Ha acertado el número");
+            System.out.println("Ha acertado el numero");
         } else if (color_sorteo.equals(color_apuesta)) {
             System.out.println("Has acertado el color " + color_apuesta);
         } else if (par_impar_sorteo.equals(par_impar_apuesta)) {
