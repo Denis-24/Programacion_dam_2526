@@ -10,6 +10,7 @@ public class Practica_1_vectores {
 
         Scanner teclado = new Scanner(System.in);
 
+        //creo las variables aqui porque dentro no los detecta.
         int vector_ejemplo[] = {1,2,3,4,5,6,7};
         int tamanyo_max = vector_ejemplo.length;
         int start = aleatorio.nextInt(0,8);
@@ -21,12 +22,13 @@ public class Practica_1_vectores {
         int vector1_int[] = {1,2,3,4,5,6,7};
         int vector2_int[] = {1,2,3,4,5,6,7};
 
-
+        //muestro por pantalla a que equipo le toca.
         System.out.println("> Equipo 1");
         System.out.println(">Introduce potencia de los samurais: ");
         String potencias1 = teclado.nextLine();
         System.out.println(">Eqipo completado");
 
+        //estaoy separando los resultados para meterlos en un vector.
         String vector1[] = potencias1.split(" ");
 
         System.out.println(vector1.length);
@@ -40,7 +42,7 @@ public class Practica_1_vectores {
 
         String vector2[] = potencias2.split(" ");
 
-
+        //paso los vectores que estan en un string a un int.
         for (int i=0; i<vector1.length;i++){
             vector1_int[i] = Integer.parseInt(vector1[i]);
             vector2_int[i] = Integer.parseInt(vector2[i]);
@@ -50,6 +52,7 @@ public class Practica_1_vectores {
 
         System.out.println("La batalla inicia con el samurai " + (start +1));
 
+        //creo un for para que vaya rrecorriendo todos los espacios, si la i llega al tamaño del vector cambio la i por 0 y asi me empieza desde el principio. Como estoy mirando las vueltas con la j cada vuelta que doy le sumo uno independeintemente de la posicion que hayamos empezado.
         for (int i=start,j=0;i<=tamanyo_max;i++,j++){
             if (i!=tamanyo_max){
                 if (vector1_int[i] > vector2_int[i]){
@@ -87,6 +90,7 @@ public class Practica_1_vectores {
 
         }
 
+        //hago un if para que muestre por pantalla dependiendo del cual equipo ha gando o muestra empate en caso de que hayan empatado.
         if (victorias_equipo_1>victorias_equipo_2){
             System.out.println("El eqipo 1 ha gando. El quepio 2 ha tenido " + muerte_2 + " muertes");
         } else if (victorias_equipo_1<victorias_equipo_2) {
