@@ -2,16 +2,18 @@ package org.example;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class La_Primitiva {
     static void main() {
 
         Random aleatorio = new Random();
 
-<<<<<<< HEAD
+        Scanner teclado = new Scanner(System.in);
+
         int extra=aleatorio.nextInt(10);
-=======
->>>>>>> 5ac855b83c4a7c4a86f10a79b10c37c4a3664f06
+
+
         int vector1[] = new int[6];
         String formato = "\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}/\\d{1}";
         int Complemento = aleatorio.nextInt(1,50);
@@ -20,8 +22,8 @@ public class La_Primitiva {
 
 
 
-<<<<<<< HEAD
-=======
+
+
         System.out.println("Introduce los datos de tu boleto:");
         String resultado= teclado.next();
 
@@ -32,7 +34,6 @@ public class La_Primitiva {
         }
 
 
->>>>>>> 5ac855b83c4a7c4a86f10a79b10c37c4a3664f06
         for (int i=0;i<vector1.length;i++){
             vector1[i]=aleatorio.nextInt(1,50);
         }
@@ -45,6 +46,8 @@ public class La_Primitiva {
         System.out.println(Arrays.toString(vector1));
         System.out.println("complementario = " + Complemento);
         System.out.println("Reintegro: " + reintegro);
+
+        System.out.println("hola");
 
 
 
