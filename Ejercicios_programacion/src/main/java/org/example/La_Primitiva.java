@@ -1,31 +1,19 @@
 package org.example;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class La_Primitiva {
     static void main() {
 
-        Scanner teclado = new Scanner(System.in);
-
         Random aleatorio = new Random();
 
         int extra=aleatorio.nextInt(10);
-
         int vector1[] = new int[6];
-
-        System.out.println("Introduce los datos de tu boleto:");
-        String resultado= teclado.next();
-
-        resultado.split("\\d{1,2}\\d{1,2}\\d{1,2}\\d{1,2}\\d{1,2}-\\d{1,2}/\\d{1}");
-
-
-
-
 
         for (int i=0;i<vector1.length;i++){
             vector1[i]=aleatorio.nextInt(1,50);
         }
+
 
 
 
