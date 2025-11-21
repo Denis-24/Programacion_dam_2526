@@ -38,12 +38,6 @@ public class Matrices_tabla {
 
         }
 
-
-
-
-
-
-
         for (String x[] : notas){
             for (String num : x){
                 System.out.print(num + " ");
@@ -51,7 +45,28 @@ public class Matrices_tabla {
             System.out.println();
         }
 
+        int sumatotoal =0;
+        for (int x = 1; x < notas.length; x++) {
+            sumatotoal=0;
+            for (int y = 1; y < notas[x].length; y++) {
 
+                sumatotoal+= Integer.parseInt(notas[x][y]);
+
+            }
+            System.out.println();
+
+            System.out.println("La nota media del alumno " + notas[x][0] + " es " + (double) (sumatotoal/asignaturas));
+
+        }
+
+        for (int x = 1; x < notas[0].length; x++) {
+            sumatotoal=0;
+            for (int y = 1; y < notas[x].length; y++) {
+                sumatotoal+=Integer.parseInt(notas[y][x]);
+
+            }
+            System.out.println("La nota meida de la asignatura de " + notas[0][x] + " es " + (double) (sumatotoal/alumnos));
+        }
 
 
 
