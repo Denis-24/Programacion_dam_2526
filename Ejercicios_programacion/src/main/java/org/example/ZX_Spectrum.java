@@ -74,7 +74,7 @@ public class ZX_Spectrum {
                     if (y<ancho){
                         origen_x=0;
                         a+=8;
-                    }if (x<ancho){
+                    }else if (x<ancho){
                         origen_y=0;
                         b+=8;
                     }
@@ -83,45 +83,9 @@ public class ZX_Spectrum {
         }
 
         if (contador>1){
-            System.out.println("No es compatible");
+            System.out.println("No es compatible...");
         }else{
             System.out.println("Es compatible...");
         }
-
-//        externo:
-//        for (String fila[] : matriz){
-//            interno:
-//            for (int x = 0, j=0; x < fila.length-1; x++ , j++) {
-//
-//                test=fila[0];
-//                test2=test;
-//                boolean hay = Arrays.asList(test2).contains(fila[x]);
-//                if (!hay){
-//                    test2=fila[x];
-//                }
-//
-//                if (ancho==16) {
-//                    if (j%8==0){
-//                        test=fila[j];
-//                        test2=test;
-//                        hay = Arrays.asList(test2).contains(fila[x]);
-//                        if (!hay){
-//                            test2=fila[x];
-//                        }
-//                    }
-//                } else if (ancho==24) {
-//
-//                } else if (ancho==32) {
-//
-//                } else if (ancho==40) {
-//
-//                } else if (ancho==48) {
-//
-//                }
-//
-//                if (fila[x].equals(test)==false || fila[x].equals(test2)==false){
-//                    contador++;
-//                }
-//        }
     }
 }
