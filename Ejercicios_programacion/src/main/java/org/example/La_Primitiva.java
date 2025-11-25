@@ -13,7 +13,7 @@ public class La_Primitiva {
 
         int extra=aleatorio.nextInt(10);
 
-
+        int contador=0;
         int vector1[] = new int[6];
         String formato = "\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}/\\d{1}";
         int Complemento = aleatorio.nextInt(1,50);
@@ -38,6 +38,30 @@ public class La_Primitiva {
             vector1[i]=aleatorio.nextInt(1,50);
         }
 
+        int tamanyo=0;
+
+        int aux[]= new int[vector1.length];
+
+        for (int i=0;i<= vector1.length-1;i++){
+            if (i== vector1.length-1){
+                aux[i]=vector1[i];
+                tamanyo++;
+            } else if (vector1[i]!=vector1[i+1]) {
+                aux[i]=vector1[i];
+                tamanyo++;
+            }
+        }
+
+        int limpio[] = new int [tamanyo];
+        int j=0;
+        for (int i=0;i< aux.length;i++){
+
+            if (aux[i]!=0){
+                limpio[j]=aux[i];
+                j++;
+            }
+        }
+
         String vector_prueba[] = resultado.split("-");
 
         System.out.println(Arrays.toString(vector_prueba));
@@ -47,7 +71,15 @@ public class La_Primitiva {
         System.out.println("complementario = " + Complemento);
         System.out.println("Reintegro: " + reintegro);
 
-        System.out.println("hola");
+        System.out.println("Sorteo:");
+
+        for (int i = 0; i < resultado.length(); i++) {
+            if (resultado.contains(limpio)){
+                contador++;
+            } else if (resultado) {
+                System.out.println("hola");
+            }
+        }
 
 
 
