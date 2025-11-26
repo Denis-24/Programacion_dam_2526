@@ -57,30 +57,32 @@ public class ZX_Spectrum {
         }
 
         contador=0;
-        externo:
-        for (int x = origen_x; x < a; x++) {
-            for (int y = origen_y; y < b; y++) {
-                if (x==0 && y==0){
-                    test=matriz[x][y];
-                    test2=test;
-                }
+        do {
+            externo:
+            for (int x = origen_x; x < a; x++) {
+                for (int y = origen_y; y < b; y++) {
+                    if (x==0 && y==0){
+                        test=matriz[x][y];
+                        test2=test;
+                    }
 
-                if (!test2.contains(matriz[x][y])){
-                    test2+=matriz[x][y];
-                    contador++;
-                }
-
-                if (origen_x%8 == 0 && origen_y%8==0 && origen_x>1 && origen_y>1){
-                    if (y<ancho){
-                        origen_x=0;
-                        a+=8;
-                    }else if (x<ancho){
-                        origen_y=0;
-                        b+=8;
+                    if (!test2.contains(matriz[x][y])){
+                        test2+=matriz[x][y];
+                        contador++;
                     }
                 }
             }
-        }
+            if (origen_x%8 == 0 && origen_y%8==0 && origen_x>1 && origen_y>1){
+                if (origen_y<ancho){
+                    origen_x=0;
+                    a+=8;
+                }else if (origen_x<ancho){
+                    origen_y=0;
+                    b+=8;
+                }
+            }
+
+        }while (a<ancho && b<alto);
 
         if (contador>1){
             System.out.println("No es compatible...");

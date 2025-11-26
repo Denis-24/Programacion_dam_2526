@@ -73,13 +73,13 @@ public class La_Primitiva {
 
         System.out.println("Sorteo:");
 
-        for (int i = 0; i < resultado.length(); i++) {
-            if (resultado.contains(limpio)){
-                contador++;
-            } else if (resultado) {
-                System.out.println("hola");
-            }
-        }
+//        for (int i = 0; i < resultado.length(); i++) {
+//            if (resultado.contains(limpio)){
+//                contador++;
+//            } else if (resultado) {
+//                System.out.println("hola");
+//            }
+//        }
 
 
 
