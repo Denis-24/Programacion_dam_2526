@@ -59,10 +59,7 @@ public class ZX_Spectrum {
         contador=0;
         do {
             externo:
-            for (int x = origen_x; x < a; x++) {
-                for (int y = origen_y; y < b; y++) {
-                    if (x==0 && y==0){
-                        test=matriz[x][y];
+            for (int x = origen_x; x < a; x++) {                  test=matriz[x][y];
                         test2=test;
                     }
 
