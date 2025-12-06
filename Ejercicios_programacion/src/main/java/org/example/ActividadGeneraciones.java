@@ -41,6 +41,7 @@ public class ActividadGeneraciones {
                         System.out.println("El formato no es numerico.");
                         return;
                     }
+                    break;
                 case 2:
                     int edad = 0;
 
